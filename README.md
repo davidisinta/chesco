@@ -11,7 +11,7 @@ Chesco is an AI-powered bot that helps users generate automated workout plans ba
 Chesco is designed to assist users in achieving their fitness and nutritional goals by providing tailored workout routines and meal plans. Whether you're a beginner or an advanced fitness enthusiast, Chesco adapts to your needs and preferences.
 
 ## Features
-- **Automated Workout Plans**: Generates workout routines based on user preferences and goals.
+- [] **Automated Workout Plans**: Generates workout routines based on user preferences and goals.
 - **Healthy Meal Plans**: Creates meal plans that are both nutritious and delicious.
 - **Recipe Suggestions**: Provides easy-to-follow recipes for the meal plans.
 - **Personalization**: Adapts to user preferences and dietary restrictions.
