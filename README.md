@@ -22,18 +22,10 @@ Chesco is designed to assist users in achieving their fitness and nutritional go
 - **User-friendly Interface**: Simple and intuitive interface for seamless user experience.
 
 ## Tech Stack
-- **Frontend**: React, HTML, CSS
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB
-- **AI/ML**: Python, TensorFlow
-- **API**: RESTful APIs
-- **Deployment**: Docker, Kubernetes
-
+- **Frontend**: React
+- **Backend**: FastAPI
+- **Deployment**: Docker
+  
 ## Installation
 To run Chesco locally, follow these steps:
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-username/chesco.git
-   cd chesco
 
