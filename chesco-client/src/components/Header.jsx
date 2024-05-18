@@ -1,4 +1,5 @@
 import Navbar from './Navbar';
+import Dropdown from "./Dropdown";
 
 const Header = () => {
   return (
@@ -7,7 +8,10 @@ const Header = () => {
         <a href="/" className="logo">
           Logo
         </a>
+
         <Navbar />
+
+
       </div>
     </header>
   );
