@@ -18,10 +18,26 @@ const MenuItems = ({ items }) => {
   document.removeEventListener("touchstart", handler);
  };
 }, [dropdown]);
+
+
    let ref = useRef();
 
+
+   const onMouseEnter = () => {
+ setDropdown(true);
+};
+
+const onMouseLeave = () => {
+ setDropdown(false);
+};
+
+
+
+
   return (
-    <li className="menu-items" ref={ref}>
+    <li className="menu-items" ref={ref}
+    onMouseEnter={onMouseEnter}
+   onMouseLeave={onMouseLeave}>
       {items.submenu ? (
         <>
           <button type="button" aria-haspopup="menu"
