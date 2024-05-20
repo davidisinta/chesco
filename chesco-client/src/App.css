@@ -21,13 +21,6 @@ header {
   padding: 10px 20px;
 }
 
-.logo {
-  text-decoration: none;
-  font-size: 25px;
-  color: inherit;
-  margin-right: 20px;
-}
-
 /* menu on desktop */
 .desktop-nav .menus {
   display: flex;
@@ -230,4 +223,18 @@ header {
   align-items: center;
   height: 100vh;
   gap: 20px;
+}
+
+
+/* Logo CSS */
+.navbar-logo {
+  height: 40px; /* Adjust height based on your design */
+  max-width: 150px; /* Ensure it doesn't exceed the max width */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-logo {
+    height: 30px; /* Smaller height for mobile devices */
+  }
 }

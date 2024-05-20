@@ -5,11 +5,11 @@ const Header = () => {
   return (
     <header>
       <div className="nav-area">
-        <a href="/" className="logo">
-          Logo
-        </a>
+          <a href="/">
+              <img src={`${process.env.PUBLIC_URL}/chesco_logo.jpg`} alt="chesco app logo" className={"navbar-logo"} />
+          </a>
 
-        <Navbar />
+          <Navbar/>
 
 
       </div>
