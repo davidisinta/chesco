@@ -6,20 +6,39 @@ export const menuItemsData = [
 
 
   {
-    title: 'Services',
-    url: '/services',
+    title: 'Fitness',
+    url: '/fitness',
     submenu: [
       {
-        title: 'Web Design',
-        url: 'web-design',
+        title: 'generate fitness plan',
+        url: 'generateFitness',
       },
       {
-        title: 'Web Development',
-        url: 'web-dev',
+        title: 'my workout plans',
+        url: 'workoutPlan',
       },
       {
-        title: 'SEO',
-        url: 'seo',
+        title: 'my fitness progress',
+        url: 'fitnessProgress',
+      },
+    ],
+  },
+
+    {
+    title: 'Diet',
+    url: '/diet',
+    submenu: [
+      {
+        title: 'generate meal plan',
+        url: 'generateMeal',
+      },
+      {
+        title: 'food rating meter',
+        url: 'foodRating',
+      },
+      {
+        title: 'my diet progress',
+        url: 'dietProgress',
       },
     ],
   },
