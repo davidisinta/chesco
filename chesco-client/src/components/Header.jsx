@@ -1,6 +1,6 @@
 import Navbar from './Navbar';
-import Dropdown from "./Dropdown";
 import { Link } from 'react-router-dom';
+import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
@@ -12,6 +12,8 @@ const Header = () => {
           </Link>
 
           <Navbar/>
+
+          <MobileNav />
 
 
       </div>
