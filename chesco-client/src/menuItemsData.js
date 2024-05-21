@@ -15,11 +15,11 @@ export const menuItemsData = [
       },
       {
         title: 'my workout plans',
-        url: 'workoutPlan',
+        url: 'myWorkoutPlan',
       },
       {
         title: 'my fitness progress',
-        url: 'fitnessProgress',
+        url: 'myFitnessProgress',
       },
     ],
   },
@@ -30,15 +30,19 @@ export const menuItemsData = [
     submenu: [
       {
         title: 'generate meal plan',
-        url: 'generateMeal',
+        url: 'generateMealPlan',
+      },
+        {
+        title: 'my meal plans',
+        url: 'myMealPlans',
       },
       {
-        title: 'food rating meter',
-        url: 'foodRating',
+        title: 'food health meter',
+        url: 'foodHealthMeter',
       },
       {
         title: 'my diet progress',
-        url: 'dietProgress',
+        url: 'myDietProgress',
       },
     ],
   },

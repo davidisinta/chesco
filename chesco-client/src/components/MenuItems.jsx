@@ -1,5 +1,6 @@
 import Dropdown from './Dropdown';
 import {useEffect, useRef, useState} from "react";
+import { Link } from 'react-router-dom';
 
 
 const MenuItems = ({ items }) => {
@@ -49,7 +50,7 @@ const onMouseLeave = () => {
            dropdown={dropdown} />
         </>
       ) : (
-        <a href={items.url}>{items.title}</a>
+        <Link to={items.url}>{items.title}</Link>
       )}
     </li>
 

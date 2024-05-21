@@ -1,13 +1,15 @@
 import Navbar from './Navbar';
 import Dropdown from "./Dropdown";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
     <header>
       <div className="nav-area">
-          <a href="/">
-              <img src={`${process.env.PUBLIC_URL}/chesco_logo.jpg`} alt="chesco app logo" className={"navbar-logo"} />
-          </a>
+
+          <Link to="/" className="logo">
+              <img src={`${process.env.PUBLIC_URL}/chesco_logo.jpg`} alt="chesco app logo" className={"navbar-logo"}/>
+          </Link>
 
           <Navbar/>
 
