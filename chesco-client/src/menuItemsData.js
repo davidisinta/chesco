@@ -7,7 +7,7 @@ export const menuItemsData = [
 
   {
     title: 'Fitness',
-    url: '/fitness',
+    url: '/generateFitness',
     submenu: [
       {
         title: 'generate fitness plan',
@@ -26,7 +26,7 @@ export const menuItemsData = [
 
     {
     title: 'Diet',
-    url: '/diet',
+    url: '/generateMealPlan',
     submenu: [
       {
         title: 'generate meal plan',

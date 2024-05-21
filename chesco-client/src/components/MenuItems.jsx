@@ -32,6 +32,10 @@ const onMouseLeave = () => {
  setDropdown(false);
 };
 
+  const toggleDropdown = () => {
+    setDropdown((prev) => !prev);
+  };
+
 
 
 
@@ -39,22 +43,45 @@ const onMouseLeave = () => {
     <li className="menu-items" ref={ref}
     onMouseEnter={onMouseEnter}
    onMouseLeave={onMouseLeave}>
-      {items.submenu ? (
+
+
+
+        {items.url && items.submenu ? (
         <>
-          <button type="button" aria-haspopup="menu"
-           onClick={() => setDropdown((prev) => !prev)}
-                  aria-expanded={dropdown ? "true" : "false"}>
-            {items.title}{' '}
+
+          <button
+            type="button"
+            aria-haspopup="menu"
+            aria-expanded={dropdown ? "true" : "false"}
+            onClick={() => toggleDropdown()}>
+            <Link to={items.url}>{items.title}</Link>
           </button>
-          <Dropdown submenus={items.submenu}
-           dropdown={dropdown} />
+          <Dropdown
+            submenus={items.submenu}
+            dropdown={dropdown}
+          />
+        </>
+      ) : !items.url && items.submenu ? (
+        <>
+          <button
+            type="button"
+            aria-haspopup="menu"
+            aria-expanded={dropdown ? "true" : "false"}>
+            {items.title}
+
+          </button>
+          <Dropdown
+
+            submenus={items.submenu}
+            dropdown={dropdown}
+          />
         </>
       ) : (
         <Link to={items.url}>{items.title}</Link>
       )}
     </li>
-
   );
+
 };
 
 export default MenuItems;
