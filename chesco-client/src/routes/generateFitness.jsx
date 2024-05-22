@@ -25,7 +25,9 @@ const GenerateFitness = () => {
       </div>
     </div>
     <div className="chatbot-text ml-3 text-gray-700">
-      <p>Hi user, based on your body goals I am ready to generate a workout plan for you.</p>
+      <p>Hello Thereee!!! My name is Mobo, your AI gym
+        assistant. Based on your sign up form,
+        I am ready to generate a personalized workout plan for you.</p>
     </div>
   </div>
 
