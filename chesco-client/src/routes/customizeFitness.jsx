@@ -1,6 +1,19 @@
 import React from "react";
+import BasicInfo from "../components/basicInfoForm";
 
 const CustomizeFitness = () => {
-  return <h1>Customize fitness johntent</h1>;
+  return (
+
+      <div className="flex h-screen">
+          <div className="w-1/2 bg-black text-white flex items-center justify-center">
+          </div>
+          <div className="w-3/4 flex items-center justify-center">
+              <BasicInfo />
+          </div>
+      </div>
+
+
+  )
+      ;
 };
 export default CustomizeFitness;

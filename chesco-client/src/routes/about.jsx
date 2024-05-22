@@ -1,10 +1,14 @@
 import React from "react";
+import BasicInfo from "../components/basicInfoForm";
 
 const About = () => {
   return (
-      <h1 className="text-3xl font-bold underline bg-red-500">
-        Hello world!
-      </h1>
+
+
+         <BasicInfo/>
+
+
+
   );
 };
 export default About;

@@ -18,7 +18,7 @@ const GenerateFitness = () => {
 
   return (
 
-<div className="chatbot-container max-w-lg mx-auto p-4 bg-white shadow-md rounded-lg">
+<div className="chatbot-container max-w-lg mx-auto p-4 bg-white shadow-md rounded-lg mt-5 border-2">
   <div className="flex items-center mb-4">
     <div className="chatbot-profile border-5 rounded-full bg-gray-100 flex-shrink-0">
       <div className="w-10 h-10 overflow-hidden rounded-full">

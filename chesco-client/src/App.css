@@ -238,3 +238,12 @@ header {
     height: 30px; /* Smaller height for mobile devices */
   }
 }
+
+
+
+.bg-image {
+  background-image: url('/Users/davidisinta/Desktop/chesco/chesco/chesco-client/public/workout_scene.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
