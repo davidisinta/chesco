@@ -12,6 +12,9 @@ import MyDietProgress from "./routes/myDietProgress";
 import MyFitnessProgress from "./routes/myFitnessProgress";
 import MyMealPlan from "./routes/myMealPlan";
 import MyWorkoutPlan from "./routes/myWorkoutPlan";
+import Profile from "./routes/profile";
+import Preferences from "./routes/preferences";
+import CustomizeFitness from "./routes/customizeFitness";
 
 
 
@@ -55,6 +58,20 @@ const router = createBrowserRouter([
       {
         path: "myDietProgress",
         element: <MyDietProgress />,
+      },
+        {
+        path: "profile",
+        element: <Profile />,
+      },
+
+        {
+        path: "preferences",
+        element: <Preferences />,
+      },
+
+        {
+        path: "customizeFitness",
+        element: <CustomizeFitness />,
       },
     ],
   },

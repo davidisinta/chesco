@@ -63,10 +63,6 @@ export const menuItemsData = [
         title: 'preferences',
         url: 'preferences',
       },
-        {
-        title: 'logout',
-        url: 'logout',
-      },
     ],
   },
 ];

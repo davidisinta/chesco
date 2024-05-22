@@ -1,9 +1,14 @@
 import React from "react";
-// import './Chatbot.css'; // Assuming you have a CSS file for styling
+import { useNavigate } from "react-router-dom";
 
 const GenerateFitness = () => {
+
+  const navigate = useNavigate();
   const handleCustomizeClick = () => {
-   console.log("customize button clicked")
+    console.log("customize button clicked")
+
+    navigate("/customizeFitness")
+
   };
 
   const handleGenerateClick = () => {
