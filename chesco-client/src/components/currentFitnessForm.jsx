@@ -1,28 +1,42 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function CurrentFitnessFrom({ addBasicData }) {
-  // State variables to store user input
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [contact, setContact] = useState("");
+export default function CurrentFitnessForm({ addFitnessData }) {
+  const [daysPerWeek, setDaysPerWeek] = useState("");
+  const [workoutDuration, setWorkoutDuration] = useState("");
+  const [pushUps, setPushUps] = useState("");
+  const [runDistance, setRunDistance] = useState("");
+  const [pullUps, setPullUps] = useState("");
+  const [waterIntake, setWaterIntake] = useState("");
 
-  // Navigation function for programmatic routing
   const navigate = useNavigate();
 
-  // Function to handle form submission
   const submit = (e) => {
     e.preventDefault();
-    if (!name || !email || !contact) {
-      // Alert if any field is missing
-      alert("All fields necessary!");
-    } else {
-      // Call the addBasicData function provided by the parent component
-      // addBasicData(name, email, contact);
-      // Navigate to the '/questions' route
-      navigate('/');
-    }
+    // if (!daysPerWeek || !workoutDuration || !pushUps || !runDistance || !pullUps || !waterIntake) {
+    //   alert("All fields are necessary!");
+    // } else {
+    //   addFitnessData({
+    //     daysPerWeek,
+    //     workoutDuration,
+    //     pushUps,
+    //     runDistance,
+    //     pullUps,
+    //     waterIntake
+    //   });
+      navigate('/about');
+    // }
   }
+
+  const renderButton = (value, state, setState) => (
+    <button
+      type="button"
+      className={`w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:border-blue-500 ${state === value ? 'bg-green-500 text-white' : 'bg-gray-300 text-gray-700'}`}
+      onClick={() => setState(value)}
+    >
+      {value}
+    </button>
+  );
 
   return (
     <div className="w-3/4 flex justify-center items-center h-screen">
@@ -31,45 +45,63 @@ export default function CurrentFitnessFrom({ addBasicData }) {
         <form onSubmit={submit}>
           <div className="mb-4">
             <label className="block text-gray-700 mb-2">
-              <b>1.</b> Name
+              How many days a week do you exercise?
             </label>
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={(e) => { setName(e.target.value) }}
-              className="w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:border-blue-500"
-              placeholder="Enter your Name"
-              autoComplete="off"
-            />
+            <div className="flex space-x-2">
+              {renderButton("<3", daysPerWeek, setDaysPerWeek)}
+              {renderButton("3-5 days", daysPerWeek, setDaysPerWeek)}
+              {renderButton("6-7 days", daysPerWeek, setDaysPerWeek)}
+            </div>
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 mb-2">
-              <b>2.</b> Email
+              How long do you workout (in minutes)?
             </label>
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={(e) => { setEmail(e.target.value) }}
-              className="w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:border-blue-500"
-              placeholder="Enter your Email"
-              autoComplete="off"
-            />
+            <div className="flex space-x-2">
+              {renderButton("<30", workoutDuration, setWorkoutDuration)}
+              {renderButton("30-60", workoutDuration, setWorkoutDuration)}
+              {renderButton(">60", workoutDuration, setWorkoutDuration)}
+            </div>
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 mb-2">
-              <b>3.</b> Contact No.
+              How many push-ups can you do?
             </label>
-            <input
-              type="tel"
-              name="contact"
-              value={contact}
-              onChange={(e) => { setContact(e.target.value) }}
-              className="w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:border-blue-500"
-              placeholder="Enter your Contact No."
-              autoComplete="off"
-            />
+            <div className="flex space-x-2">
+              {renderButton("<10", pushUps, setPushUps)}
+              {renderButton("10-20", pushUps, setPushUps)}
+              {renderButton(">20", pushUps, setPushUps)}
+            </div>
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-700 mb-2">
+              What distance can you run (in km)?
+            </label>
+            <div className="flex space-x-2">
+              {renderButton("<1", runDistance, setRunDistance)}
+              {renderButton("1-5", runDistance, setRunDistance)}
+              {renderButton(">5", runDistance, setRunDistance)}
+            </div>
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-700 mb-2">
+              How many pull-ups can you do?
+            </label>
+            <div className="flex space-x-2">
+              {renderButton("<5", pullUps, setPullUps)}
+              {renderButton("5-10", pullUps, setPullUps)}
+              {renderButton(">10", pullUps, setPullUps)}
+            </div>
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-700 mb-2">
+              How many glasses of water do you drink a day?
+            </label>
+            <div className="flex space-x-2">
+              {renderButton("<3", waterIntake, setWaterIntake)}
+              {renderButton("3-5", waterIntake, setWaterIntake)}
+              {renderButton(">5", waterIntake, setWaterIntake)}
+            </div>
           </div>
           <button
             type="submit"
@@ -79,7 +111,7 @@ export default function CurrentFitnessFrom({ addBasicData }) {
           </button>
         </form>
         <div className="mt-4 flex justify-center">
-          <span className="inline-block  bg-gray-300 text-white px-3 py-1 rounded-full mr-2"><b>1</b></span>
+          <span className="inline-block bg-gray-300 text-white px-3 py-1 rounded-full mr-2"><b>1</b></span>
           <span className="inline-block bg-green-500 text-gray-500 px-3 py-1 rounded-full mr-2">2</span>
           <span className="inline-block bg-gray-300 text-gray-500 px-3 py-1 rounded-full mr-2">3</span>
           <span className="inline-block bg-gray-300 text-gray-500 px-3 py-1 rounded-full">4</span>
