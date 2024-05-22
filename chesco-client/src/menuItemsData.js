@@ -53,4 +53,20 @@ export const menuItemsData = [
     title: 'About',
     url: '/about',
   },
+
+
+    {
+    title: 'Profile',
+    url: '/profile',
+    submenu: [
+      {
+        title: 'preferences',
+        url: 'preferences',
+      },
+        {
+        title: 'logout',
+        url: 'logout',
+      },
+    ],
+  },
 ];
