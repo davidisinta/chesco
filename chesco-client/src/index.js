@@ -16,7 +16,8 @@ import Profile from "./routes/profile";
 import Preferences from "./routes/preferences";
 import CustomizeFitness from "./routes/customizeFitness";
 import CurrentFitnessLevel from "./routes/currentFitnessLevel";
-
+import BodyGoals from "./routes/bodyGoals";
+import ExercisePreferences from "./routes/exercisePreferences";
 
 
 const router = createBrowserRouter([
@@ -78,6 +79,17 @@ const router = createBrowserRouter([
         {
         path: "currentFitnessLevel",
         element: <CurrentFitnessLevel />,
+      },
+
+        {
+        path: "bodyGoals",
+        element: <BodyGoals />,
+      },
+
+
+        {
+        path: "exercisePreferences",
+        element: <ExercisePreferences/>,
       },
     ],
   },

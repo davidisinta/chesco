@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function CurrentFitnessForm({ addFitnessData }) {
+export default function ExercisePreferencesForm({ addFitnessData }) {
   const [daysPerWeek, setDaysPerWeek] = useState("");
   const [workoutDuration, setWorkoutDuration] = useState("");
   const [pushUps, setPushUps] = useState("");
@@ -24,7 +24,7 @@ export default function CurrentFitnessForm({ addFitnessData }) {
     //     pullUps,
     //     waterIntake
     //   });
-      navigate('/bodyGoals');
+      navigate('/generateFitness');
     // }
   }
 
@@ -41,7 +41,7 @@ export default function CurrentFitnessForm({ addFitnessData }) {
   return (
     <div className="w-3/4 flex justify-center items-center h-screen">
       <div className="w-full max-w-md bg-white rounded-lg shadow-md p-6">
-        <h4 className="text-2xl font-semibold text-gray-700 mb-4">Current Fitness Level</h4>
+        <h4 className="text-2xl font-semibold text-gray-700 mb-4">Exercise preferences</h4>
         <form onSubmit={submit}>
           <div className="mb-4">
             <label className="block text-gray-700 mb-2">
@@ -107,14 +107,14 @@ export default function CurrentFitnessForm({ addFitnessData }) {
             type="submit"
             className="w-full bg-blue-500 text-white py-2 rounded-lg shadow-md hover:bg-blue-600 transition duration-300"
           >
-            Next
+            Save
           </button>
         </form>
         <div className="mt-4 flex justify-center">
           <span className="inline-block bg-gray-300 text-white px-3 py-1 rounded-full mr-2"><b>1</b></span>
-          <span className="inline-block bg-green-500 text-gray-500 px-3 py-1 rounded-full mr-2">2</span>
+          <span className="inline-block bg-gray-300 text-gray-500 px-3 py-1 rounded-full mr-2">2</span>
           <span className="inline-block bg-gray-300 text-gray-500 px-3 py-1 rounded-full mr-2">3</span>
-          <span className="inline-block bg-gray-300 text-gray-500 px-3 py-1 rounded-full">4</span>
+          <span className="inline-block bg-green-500 text-gray-500 px-3 py-1 rounded-full">4</span>
         </div>
       </div>
     </div>

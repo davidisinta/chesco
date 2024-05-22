@@ -129,8 +129,8 @@ export default function BasicInfo({ addBasicData }) {
         <div className="mt-4 flex justify-center">
           <span className="inline-block bg-green-500 text-white px-3 py-1 rounded-full mr-2"><b>1</b></span>
           <span className="inline-block bg-gray-300 text-gray-500 px-3 py-1 rounded-full mr-2">2</span>
-          <span className="inline-block bg-gray-300 text-gray-500 px-3 py-1 rounded-full">3</span>
-          <span className="inline-block bg-gray-300 text-gray-500 px-3 py-1 rounded-full mr-2">4</span>
+          <span className="inline-block bg-gray-300 text-gray-500 px-3 py-1 rounded-full mr-2">3</span>
+          <span className="inline-block bg-gray-300 text-gray-500 px-3 py-1 rounded-full">4</span>
         </div>
       </div>
     </div>
