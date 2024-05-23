@@ -2,30 +2,24 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function BodyGoalsForm({ addFitnessData }) {
-  const [daysPerWeek, setDaysPerWeek] = useState("");
-  const [workoutDuration, setWorkoutDuration] = useState("");
-  const [pushUps, setPushUps] = useState("");
-  const [runDistance, setRunDistance] = useState("");
-  const [pullUps, setPullUps] = useState("");
-  const [waterIntake, setWaterIntake] = useState("");
+  const [strengthTraining, setStrengthTraining] = useState("");
+  const [weightManagement, setWeightManagement] = useState("");
+  const [endurance, setEndurance] = useState("");
+  const [flexibilityMobility, setFlexibilityMobility] = useState("");
+  const [mentalWellBeing, setMentalWellBeing] = useState("");
 
   const navigate = useNavigate();
 
   const submit = (e) => {
     e.preventDefault();
-    // if (!daysPerWeek || !workoutDuration || !pushUps || !runDistance || !pullUps || !waterIntake) {
-    //   alert("All fields are necessary!");
-    // } else {
-    //   addFitnessData({
-    //     daysPerWeek,
-    //     workoutDuration,
-    //     pushUps,
-    //     runDistance,
-    //     pullUps,
-    //     waterIntake
-    //   });
-      navigate('/exercisePreferences');
-    // }
+    // addFitnessData({
+    //   strengthTraining,
+    //   weightManagement,
+    //   endurance,
+    //   flexibilityMobility,
+    //   mentalWellBeing
+    // });
+    navigate('/exercisePreferences');
   }
 
   const renderButton = (value, state, setState) => (
@@ -45,62 +39,52 @@ export default function BodyGoalsForm({ addFitnessData }) {
         <form onSubmit={submit}>
           <div className="mb-4">
             <label className="block text-gray-700 mb-2">
-              How many days a week do you exercise?
+              Strength Training Goals
             </label>
             <div className="flex space-x-2">
-              {renderButton("<3", daysPerWeek, setDaysPerWeek)}
-              {renderButton("3-5 days", daysPerWeek, setDaysPerWeek)}
-              {renderButton("6-7 days", daysPerWeek, setDaysPerWeek)}
+              {renderButton("Build Muscle Mass", strengthTraining, setStrengthTraining)}
+              {renderButton("Increase Strength", strengthTraining, setStrengthTraining)}
+              {renderButton("Functional Strength", strengthTraining, setStrengthTraining)}
             </div>
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 mb-2">
-              How long do you workout (in minutes)?
+              Weight Management Goals
             </label>
             <div className="flex space-x-2">
-              {renderButton("<30", workoutDuration, setWorkoutDuration)}
-              {renderButton("30-60", workoutDuration, setWorkoutDuration)}
-              {renderButton(">60", workoutDuration, setWorkoutDuration)}
+              {renderButton("Weight Loss", weightManagement, setWeightManagement)}
+              {renderButton("Weight Gain", weightManagement, setWeightManagement)}
+              {renderButton("Weight Maintenance", weightManagement, setWeightManagement)}
             </div>
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 mb-2">
-              How many push-ups can you do?
+              Endurance Goals
             </label>
             <div className="flex space-x-2">
-              {renderButton("<10", pushUps, setPushUps)}
-              {renderButton("10-20", pushUps, setPushUps)}
-              {renderButton(">20", pushUps, setPushUps)}
+              {renderButton("Cardiovascular Endurance", endurance, setEndurance)}
+              {renderButton("Muscular Endurance", endurance, setEndurance)}
+              {renderButton("General Stamina", endurance, setEndurance)}
             </div>
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 mb-2">
-              What distance can you run (in km)?
+              Flexibility and Mobility Goals
             </label>
             <div className="flex space-x-2">
-              {renderButton("<1", runDistance, setRunDistance)}
-              {renderButton("1-5", runDistance, setRunDistance)}
-              {renderButton(">5", runDistance, setRunDistance)}
+              {renderButton("Increase Flexibility", flexibilityMobility, setFlexibilityMobility)}
+              {renderButton("Improve Mobility", flexibilityMobility, setFlexibilityMobility)}
+              {renderButton("Injury Prevention", flexibilityMobility, setFlexibilityMobility)}
             </div>
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 mb-2">
-              How many pull-ups can you do?
+              Mental and Emotional Well-being Goals
             </label>
             <div className="flex space-x-2">
-              {renderButton("<5", pullUps, setPullUps)}
-              {renderButton("5-10", pullUps, setPullUps)}
-              {renderButton(">10", pullUps, setPullUps)}
-            </div>
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700 mb-2">
-              How many glasses of water do you drink a day?
-            </label>
-            <div className="flex space-x-2">
-              {renderButton("<3", waterIntake, setWaterIntake)}
-              {renderButton("3-5", waterIntake, setWaterIntake)}
-              {renderButton(">5", waterIntake, setWaterIntake)}
+              {renderButton("Stress Relief", mentalWellBeing, setMentalWellBeing)}
+              {renderButton("Improve Mood", mentalWellBeing, setMentalWellBeing)}
+              {renderButton("Boost Confidence", mentalWellBeing, setMentalWellBeing)}
             </div>
           </div>
           <button
@@ -113,8 +97,8 @@ export default function BodyGoalsForm({ addFitnessData }) {
         <div className="mt-4 flex justify-center">
           <span className="inline-block bg-gray-300 text-white px-3 py-1 rounded-full mr-2"><b>1</b></span>
           <span className="inline-block bg-gray-300 text-gray-500 px-3 py-1 rounded-full mr-2">2</span>
-          <span className="inline-block  bg-green-500 text-gray-500 px-3 py-1 rounded-full mr-2">3</span>
-          <span className="inline-block bg-gray-300  text-gray-500 px-3 py-1 rounded-full">4</span>
+          <span className="inline-block bg-green-500 text-gray-500 px-3 py-1 rounded-full mr-2">3</span>
+          <span className="inline-block bg-gray-300 text-gray-500 px-3 py-1 rounded-full">4</span>
         </div>
       </div>
     </div>

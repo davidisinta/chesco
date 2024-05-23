@@ -1,0 +1,7 @@
+
+ curl -X POST \
+     -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+     -H "x-goog-user-project: fitly-ai-bot" \
+     -H "Content-Type: application/json; charset=utf-8" \
+     -d @request.json \
+     "https://global-dialogflow.googleapis.com/v3/projects/fitly-ai-bot/locations/global/agents/85d914b1-096d-46e8-8106-19d80aac152d/sessions/test-session-123:detectIntent"
